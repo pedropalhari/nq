@@ -6,6 +6,9 @@ import JSONtoTS from "json-to-ts";
 import { nanoid } from "nanoid";
 import { join } from "node:path";
 
+/**
+ * Function to generate the .ts placeholder body.
+ */
 function generateTypescriptBody(params: {
   D_TS_FILE_NAME: string;
   isArray: boolean;
@@ -25,7 +28,12 @@ export default async (json: JSONType${isArray ? "[]" : ""}) => {
   return TS_BODY;
 }
 
-async function readPipe() {
+/**
+ * Helper function to read from `stdin`.
+ *
+ * This allows commands such as `$ cat users.json | nq` to work.
+ */
+async function readStdinPipe() {
   let pipeString = "";
 
   return new Promise<string>((resolve) => {
@@ -45,7 +53,7 @@ async function run() {
     let fileJSONBuffer = await fs.readFile(join(process.cwd(), jsonFileName));
     pipeJSONRaw = await fileJSONBuffer.toString();
   } else {
-    pipeJSONRaw = await readPipe();
+    pipeJSONRaw = await readStdinPipe();
   }
 
   const pipeJSON = JSON.parse(pipeJSONRaw);
@@ -83,7 +91,6 @@ async function run() {
   execSync(`code -w ${openCodeInNewWindow ? "-n " : ""}${TS_FILE_PATH}`);
 
   // Run it
-
   try {
     const func = require(TS_FILE_PATH);
     let result = await func.default(pipeJSON);

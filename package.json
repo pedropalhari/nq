@@ -31,5 +31,6 @@
     "build": "tsc && yarn build:prepend && yarn build:append && yarn build:move && yarn build:make-execute && yarn build:cleanup"
   },
   "author": "Pedro Palhari",
-  "license": "MIT"
+  "license": "MIT",
+  "keywords": ["json", "jq", "mapping"]
 }
