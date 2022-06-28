@@ -15,6 +15,10 @@
     "tsm": "^2.2.1",
     "nanoid": "^4.0.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pedropalhari/nq"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node -r tsm --enable-source-maps index.ts",
