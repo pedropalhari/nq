@@ -1,0 +1,31 @@
+{
+  "name": "@palhari/nq",
+  "version": "0.1",
+  "description": "⚡️ Batteries included JSON mapper",
+  "main": "index.js",
+  "bin": {
+    "@palhari/nq": "bin/index.js"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "tsm": "^2.2.1",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "json-to-ts": "^1.7.0",
+    "nanoid": "^4.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node -r tsm --enable-source-maps index.ts",
+    "clean": "rm **/*.nq.*",
+    "build:prepend": "echo \"#! /usr/bin/env node\" >> ./index_shebang.js",
+    "build:append": "cat ./index.js >> ./index_shebang.js",
+    "build:move": "mv ./index_shebang.js ./bin/index.js",
+    "build:make-execute": "chmod +x ./bin/index.js",
+    "build:cleanup": "rm index.js",
+    "build": "tsc && yarn build:prepend && yarn build:append && yarn build:move && yarn build:make-execute && yarn build:cleanup"
+  },
+  "author": "Pedro Palhari",
+  "license": "MIT"
+}
