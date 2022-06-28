@@ -51,6 +51,6 @@ My aim is to bring a little bit of that here.
 
 # Acknowledgments
 
-There are two big main libraries that this project heavily depends on, [tsm]() and [json-to-ts](). `tsm` is used to provide the runtime with a fast transpiler for the typescript function and `json-to-ts` is used to generate types from the input JSON. Be sure to check them out as they're really powerful on their own.
+There are two big main libraries that this project heavily depends on, [tsm](https://github.com/lukeed/tsm) and [json-to-ts](https://github.com/MariusAlch/json-to-ts). `tsm` is used to provide the runtime with a fast transpiler for the typescript function and `json-to-ts` is used to generate types from the input JSON. Be sure to check them out as they're really powerful on their own.
 
-Also, [nanoid]() is used for the file names.
+Also, [nanoid](https://github.com/ai/nanoid) is used for the file names.
