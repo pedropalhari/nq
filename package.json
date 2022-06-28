@@ -1,6 +1,6 @@
 {
   "name": "@palhari/nq",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "⚡️ Batteries included JSON mapper",
   "main": "index.js",
   "bin": {
@@ -32,5 +32,9 @@
   },
   "author": "Pedro Palhari",
   "license": "MIT",
-  "keywords": ["json", "jq", "mapping"]
+  "keywords": [
+    "json",
+    "jq",
+    "mapping"
+  ]
 }
