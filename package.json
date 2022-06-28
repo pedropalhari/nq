@@ -1,6 +1,6 @@
 {
   "name": "@palhari/nq",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "⚡️ Batteries included JSON mapper",
   "main": "index.js",
   "bin": {
